@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-data-csv-audit"
+version = "0.1.0"
+description = "A dependency-free CSV quality gate for open datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Open Data CSV Audit Contributors"}]
+keywords = ["csv", "open-data", "validation", "data-quality", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+csv-audit = "opendata_csv_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
