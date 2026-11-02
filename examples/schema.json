@@ -1,0 +1,11 @@
+{
+  "columns": {
+    "id": {"type": "integer", "required": true},
+    "name": {"type": "string", "required": true},
+    "date": {"type": "date", "required": true},
+    "amount": {"type": "number", "required": true},
+    "status": {"type": "string", "allowed_values": ["open", "closed"]}
+  },
+  "unique_by": ["id"],
+  "additional_columns": false
+}
